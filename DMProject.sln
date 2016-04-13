@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMProject", "DMProject\DMProject.csproj", "{31FB1217-7F26-4931-B13E-20B13938AB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMProject.Entities", "DMProject.Entities\DMProject.Entities.csproj", "{A9BD8AD8-7262-4063-8A4B-673C9F7BFFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMProject.Data", "DMProject.Data\DMProject.Data.csproj", "{0B9E0231-4C6D-482F-96B8-79592730557A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMProject.Services", "DMProject.Services\DMProject.Services.csproj", "{DD92E449-BE71-440E-A63E-32DE72452518}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FB1217-7F26-4931-B13E-20B13938AB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FB1217-7F26-4931-B13E-20B13938AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FB1217-7F26-4931-B13E-20B13938AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FB1217-7F26-4931-B13E-20B13938AB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BD8AD8-7262-4063-8A4B-673C9F7BFFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BD8AD8-7262-4063-8A4B-673C9F7BFFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BD8AD8-7262-4063-8A4B-673C9F7BFFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BD8AD8-7262-4063-8A4B-673C9F7BFFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9E0231-4C6D-482F-96B8-79592730557A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9E0231-4C6D-482F-96B8-79592730557A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9E0231-4C6D-482F-96B8-79592730557A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9E0231-4C6D-482F-96B8-79592730557A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD92E449-BE71-440E-A63E-32DE72452518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD92E449-BE71-440E-A63E-32DE72452518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD92E449-BE71-440E-A63E-32DE72452518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD92E449-BE71-440E-A63E-32DE72452518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
