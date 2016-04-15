@@ -30,6 +30,7 @@ namespace DMProject
             GlobalConfiguration.Configuration.EnsureInitialized();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+     
         }
     }
 }

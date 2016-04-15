@@ -31,5 +31,22 @@ namespace DMProject.Infrastructure.Extensions
             userbean.truename = userbeanviewvm.truename;
             userbean.sex = userbeanviewvm.sex;  
         }
+        public static void UpdatePrivilegeEntity(this Privilege privilegebean, PrivilegeViewModel privilegebeanviewvm)
+        {
+            privilegebean.name = privilegebeanviewvm.name;
+            privilegebean.code = privilegebeanviewvm.code;
+            privilegebean.fullcode = privilegebeanviewvm.fullcode;
+            privilegebean.type = privilegebeanviewvm.type;
+            privilegebean.ix = privilegebeanviewvm.ix;
+            privilegebean.parentid = privilegebeanviewvm.parentid;
+            privilegebean.path = privilegebeanviewvm.path;
+            privilegebean.hasscope = privilegebeanviewvm.hasscope;
+
+
+
+
+
+    }
+
     }
 }

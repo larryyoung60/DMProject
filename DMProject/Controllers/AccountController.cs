@@ -94,5 +94,41 @@ namespace DMProject.Controllers
                 return response;
             });
         }
+
+        [Authorize(Roles ="PrivilegeAdd")]
+        [Route("PrivilegeAdd")]
+        [HttpPost]
+        public HttpResponseMessage Privilege(HttpRequestMessage request, RegistrationViewModel user)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, new { success = false });
+                }
+                else
+                {
+                    Entities.UserEntity myuser = new UserEntity();
+
+                    myuser.UpdateUserEntity(user);
+
+
+                    Entities.UserEntity _user = _membershipService.CreateUser(myuser, new int[] { 1 });
+
+                    if (_user != null)
+                    {
+                        response = request.CreateResponse(HttpStatusCode.OK, new { success = true });
+                    }
+                    else
+                    {
+                        response = request.CreateResponse(HttpStatusCode.OK, new { success = false });
+                    }
+                }
+
+                return response;
+            });
+        }
     }
 }

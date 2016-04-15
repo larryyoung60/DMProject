@@ -19,19 +19,29 @@ namespace DMProject.Services
         private readonly IEntityBaseRepository<UserEntity> _userRepository;
         private readonly IEntityBaseRepository<RoleDefine> _roledefRepository;
         private readonly IEntityBaseRepository<UserRole> _userRoleRepository;
-        private readonly IEntityBaseRepository<RolePrivilege> _roleprivilegeRepository;  
+        private readonly IEntityBaseRepository<RolePrivilege> _roleprivilegeRepository;
+        private readonly IEntityBaseRepository<Location> _locationRepository;
+        private readonly IEntityBaseRepository<Privilege> _privilegeRepository;
         private readonly IEncryptionService _encryptionService;
         private readonly IUnitOfWork _unitOfWork;
         #endregion
 
 
-        public MembershipService(IEntityBaseRepository<UserEntity> userRepository, IEntityBaseRepository<RoleDefine> roleRepository,
- IEntityBaseRepository<UserRole> userRoleRepository, IEntityBaseRepository<RolePrivilege> roleprivilegeRepository,  IEncryptionService encryptionService, IUnitOfWork unitOfWork)
+        public MembershipService(IEntityBaseRepository<UserEntity> userRepository, 
+                                IEntityBaseRepository<RoleDefine> roleRepository,
+                                 IEntityBaseRepository<UserRole> userRoleRepository, 
+                                 IEntityBaseRepository<RolePrivilege> roleprivilegeRepository, 
+                                 IEntityBaseRepository<Location> locationRepository,
+                                 IEntityBaseRepository<Privilege> privilegeRepository,
+                                 IEncryptionService encryptionService, 
+                                 IUnitOfWork unitOfWork)
         {
             _userRepository = userRepository;
             _roledefRepository = roleRepository;
             _userRoleRepository = userRoleRepository;
             _encryptionService = encryptionService;
+            _locationRepository = locationRepository;
+            _privilegeRepository = privilegeRepository;
             _unitOfWork = unitOfWork;
             _roleprivilegeRepository = roleprivilegeRepository;
         }
@@ -135,6 +145,17 @@ namespace DMProject.Services
                 }
             }
             return _result.Distinct().ToList();
+        }
+
+
+     
+
+
+        public string AddRolePrivilege(RolePrivilege roleprivilege) {
+            return "成功!";
+        }
+        public RoleDefine AddRole(RoleDefine role) {
+            return role;
         }
         private bool isPasswordValid(UserEntity user, string password)
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DMProject.Services.Utilities;
 using DMProject.Entities;
 
+
 namespace DMProject.Services.Abstract
 {
     public interface IMembershipService
@@ -14,5 +15,9 @@ namespace DMProject.Services.Abstract
         UserEntity CreateUser(UserEntity userbean, int[] roles);
         UserEntity GetUser(int userId);
         List<Privilege> GetUserRoles(string username);
+
+
+        //角色的增删改查
+        RoleDefine AddRole(RoleDefine role);
     }
 }
