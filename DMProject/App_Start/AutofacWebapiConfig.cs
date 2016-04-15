@@ -16,7 +16,8 @@ using DMProject.Services;
 using DMProject.Services.Utilities;
 using DMProject.Services.Abstract;
 using DMProject.Infrastructure.Core;
-
+using DMProject.Services.Abstract.Base;
+using DMProject.Services;
 namespace DMProject.App_Start
 {
     public class AutofacWebapiConfig
@@ -48,7 +49,7 @@ namespace DMProject.App_Start
             builder.RegisterType<EncryptionService>().As<IEncryptionService>().InstancePerRequest();
 
             builder.RegisterType<MembershipService>().As<IMembershipService>().InstancePerRequest();
-
+            builder.RegisterType<PrivilegeService>().As<IPrivilegeService>().InstancePerRequest();
             // Generic Data Repository Factory
             builder.RegisterType<DataRepositoryFactory>().As<IDataRepositoryFactory>().InstancePerRequest();
 
